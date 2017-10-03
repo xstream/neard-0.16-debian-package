@@ -1,0 +1,4 @@
+etc/dbus-1/system.d/org.neard.conf
+usr/lib/neard/nfc/neard
+lib/systemd/system/neard.service
+usr/share/dbus-1/system-services/org.neard.service

@@ -1,0 +1,20 @@
+Add org.neard.service
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -144,6 +144,8 @@
+ if SYSTEMD
+ systemdsystemunitdir = ${SYSTEMD_SYSTEMUNITDIR}
+ systemdsystemunit_DATA = src/neard.service
++dbussystembusservicesdir = /usr/share/dbus-1/system-services
++dbussystembusservices_DATA = src/org.neard.service
+ endif
+ 
+ EXTRA_DIST += src/neard.service.in
+--- /dev/null
++++ b/src/org.neard.service
+@@ -0,0 +1,5 @@
++[D-BUS Service]
++Name=org.neard
++Exec=/bin/false
++User=root
++SystemdService=dbus-org.neard.service
